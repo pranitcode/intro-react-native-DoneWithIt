@@ -10,7 +10,9 @@ import {
   SafeAreaView,
   numberOfLines,
   TouchableWithoutFeedback,
-  TouchableOpacity
+  TouchableOpacity,
+  Button,
+  Alert
 } from 'react-native';
 
 export default function App() {
@@ -28,9 +30,13 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <TouchableNativeFeedback>
-       <View style={{width:100,height:300,backgroundColor:"blue"}} ></View>
-      </TouchableNativeFeedback>
+      <Button title="Click me" onPress={() => Alert.alert("Title","message", [
+        { text: "pranit", onPress: () => console.log("pranit")},{text: "paras", onPress: () => console.log("paras")}])}></Button>
+    
+
+    
+    
+    
     </View>
   );
 }
@@ -55,7 +61,7 @@ const styles = StyleSheet.create({
 // height:200,
 // uri:"https://picsum.photos/id/200/300"}}/>
 
-
+// <Button title="Click me" onPress={() => alert("ok")}></Button>
 
   
 // <Image 
@@ -81,3 +87,10 @@ const styles = StyleSheet.create({
 //   </View>
 // </TouchableNativeFeedback>
 // </View>
+
+
+// <View style={styles.container}>
+// <TouchableNativeFeedback>
+//  <View style={{width:100,height:300,backgroundColor:"blue"}} ></View>
+// </TouchableNativeFeedback>
+// // </View>
