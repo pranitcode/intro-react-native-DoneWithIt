@@ -12,7 +12,9 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
   Button,
-  Alert
+  Alert,
+  Platform,
+  
 } from 'react-native';
 
 export default function App() {
@@ -31,7 +33,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Button title="Click me" onPress={() => Alert.alert("Title","message", [
-        { text: "pranit", onPress: () => console.log("pranit")},{text: "paras", onPress: () => console.log("paras")}])}></Button>
+        { text: "pranit", onPress: () => console.log("pranit") },
+        { text: "paras", onPress: () => console.log("paras") }])}></Button>
     
 
     
@@ -45,8 +48,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent:"center",
-    alignItems:"center"
+    paddingTop: Platform.OS === 'android' ? 30 : 0,
    
   },
 });
