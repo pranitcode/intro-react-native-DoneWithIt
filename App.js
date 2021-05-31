@@ -1,6 +1,8 @@
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {
+  Dimensions,
   StyleSheet,
   Text,
   View,
@@ -14,10 +16,11 @@ import {
   Button,
   Alert,
   Platform,
-  
-} from 'react-native';
+  } from 'react-native';
 
 export default function App() {
+
+  console.log(Dimensions.get("screen"));
 
   const handelChange = () => {
 
@@ -32,14 +35,13 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <Button title="Click me" onPress={() => Alert.alert("Title","message", [
-        { text: "pranit", onPress: () => console.log("pranit") },
-        { text: "paras", onPress: () => console.log("paras") }])}></Button>
-    
+       <View style={{
+         
+         backgroundColor:"Blue",
+         width:"100%",
+         height:"30%"
 
-    
-    
-    
+       }}></View>
     </View>
   );
 }
@@ -49,9 +51,90 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: Platform.OS === 'android' ? 30 : 0,
-   
-  },
+   },
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { StatusBar } from 'expo-status-bar';
+// import React from 'react';
+// import {
+//   StyleSheet,
+//   Text,
+//   View,
+//   Image,
+//   TouchableNativeFeedback,
+//   TouchableHighlight,
+//   SafeAreaView,
+//   numberOfLines,
+//   TouchableWithoutFeedback,
+//   TouchableOpacity,
+//   Button,
+//   Alert,
+//   Platform,
+  
+// } from 'react-native';
+
+// export default function App() {
+
+//   const handelChange = () => {
+
+//     console.log("text clicked")
+
+//   }
+//   const ImagehandChange = () => {
+
+//     console.log("on image")
+
+//   }
+  
+//   return (
+//     <View style={styles.container}>
+//       <Button title="Click me" onPress={() => Alert.alert("Title","message", [
+//         { text: "pranit", onPress: () => console.log("pranit") },
+//         { text: "paras", onPress: () => console.log("paras") }])}></Button>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     paddingTop: Platform.OS === 'android' ? 30 : 0,
+   
+//   },
+// });
 // https://picsum.photos/id/237/200/300
 //  <Image source={require("./assets/adaptive-icon.png")}/> //from locol image
 
