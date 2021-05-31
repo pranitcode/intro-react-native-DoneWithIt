@@ -1,6 +1,7 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { useDimensions,useDeviceOrientation} from '@react-native-community/hooks'
 import {
   Dimensions,
   StyleSheet,
@@ -20,7 +21,9 @@ import {
 
 export default function App() {
 
-  console.log(Dimensions.get("screen"));
+  // console.log(Dimensions.get("screen"));
+  // console.log(useDimensions())
+  console.log(useDeviceOrientation())
 
   const handelChange = () => {
 
@@ -37,7 +40,7 @@ export default function App() {
     <View style={styles.container}>
        <View style={{
          
-         backgroundColor:"Blue",
+         backgroundColor:"blue",
          width:"100%",
          height:"30%"
 
@@ -49,7 +52,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    // backgroundColor: 'orange',
     paddingTop: Platform.OS === 'android' ? 30 : 0,
    },
 });
