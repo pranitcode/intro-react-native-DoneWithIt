@@ -1,61 +1,34 @@
 
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { useDimensions,useDeviceOrientation} from '@react-native-community/hooks'
-import {
-  Dimensions,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableNativeFeedback,
-  TouchableHighlight,
-  SafeAreaView,
-  numberOfLines,
-  TouchableWithoutFeedback,
-  TouchableOpacity,
-  Button,
-  Alert,
-  Platform,
-  } from 'react-native';
 
-export default function App() {
+import {View} from "react-native";
+import React from 'react'
 
-  // console.log(Dimensions.get("screen"));
-  // console.log(useDimensions())
-  console.log(useDeviceOrientation())
-
-  const handelChange = () => {
-
-    console.log("text clicked")
-
-  }
-  const ImagehandChange = () => {
-
-    console.log("on image")
-
-  }
-  
+const App = () => {
   return (
-    <View style={styles.container}>
-       <View style={{
-         
-         backgroundColor:"blue",
-         width:"100%",
-         height:"30%"
+    <>
+    
+ <View style={{
+      backgroundColor:"tomato",
+      flex: 2
+    }}></View>
+<View style={{
+      backgroundColor:"blue",
+      flex: 1
+    }}></View>
 
-       }}></View>
-    </View>
-  );
+     <View style={{
+      backgroundColor:"orange",
+      flex: 1
+    }}></View>
+     <View style={{
+      backgroundColor:"yellow",
+      flex: 1
+    }}></View>
+    </>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: 'orange',
-    paddingTop: Platform.OS === 'android' ? 30 : 0,
-   },
-});
+export default App
 
 
 
@@ -88,6 +61,68 @@ const styles = StyleSheet.create({
 
 
 
+
+
+// import { StatusBar } from 'expo-status-bar';
+// import React from 'react';
+// import { useDimensions,useDeviceOrientation} from '@react-native-community/hooks'
+// import {
+//   Dimensions,
+//   StyleSheet,
+//   Text,
+//   View,
+//   Image,
+//   TouchableNativeFeedback,
+//   TouchableHighlight,
+//   SafeAreaView,
+//   numberOfLines,
+//   TouchableWithoutFeedback,
+//   TouchableOpacity,
+//   Button,
+//   Alert,
+//   Platform,
+//   } from 'react-native';
+
+// export default function App() {
+
+//   // console.log(Dimensions.get("screen"));
+//   // console.log(useDimensions())
+//   console.log(useDeviceOrientation())
+
+//   const handelChange = () => {
+
+//     console.log("text clicked")
+
+//   }
+//   const ImagehandChange = () => {
+
+//     console.log("on image")
+
+//   }
+  
+//   return (
+//     <View style={styles.container}>
+//        <View style={{
+         
+//          backgroundColor:"blue",
+//          width:"100%",
+//          height:"30%"
+
+//        }}></View>
+//     </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     // backgroundColor: 'orange',
+//     paddingTop: Platform.OS === 'android' ? 30 : 0,
+//    },
+// });
+
+
+// ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
 // import { StatusBar } from 'expo-status-bar';
 // import React from 'react';
